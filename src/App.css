@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paprika&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Paprika&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #06223f;
+  --primary-weight: 400;
+}
+
+/* main section */
+.menu-icon {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.popup {
+  background-color: #eef1f6;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  animation-name: popup;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+.popdown {
+  background-color: #eef1f6;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  animation-name: popdown;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+.icon {
+  background-color: #062344;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 40px;
+  color: #fff;
+}
+.main-div {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+h1 {
+  font-family: "Inria Serif", serif;
+  font-weight: 600;
+  font-size: 48px;
+}
+.main-span {
+  padding: 8px 40px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  border-bottom-right-radius: 25px;
+  width: max-content;
+  cursor: pointer;
+}
+h2 {
+  font-family: "Paprika", serif;
+  font-weight: 500;
+  color: #253d57;
+  font-size: 48px;
+}
+
+h6 {
+  font-family: "Paprika", serif;
+  font-weight: 700;
+  color: #253d57;
+}
+span {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  color: #06223f;
+}
+
+.side-animation {
+  background-image: linear-gradient(180deg, #b6ccf5 0.48%, #d5e3f1 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 35%;
+  transform: translateX(600px);
+  animation-name: slideright;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.side-animation h1 {
+  position: absolute;
+  bottom: 55%;
+  right: -130px;
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  color: #fff;
+  font-size: 48px;
+  rotate: 90deg;
+  display: flex;
+  align-items: center;
+}
+.side-animation h1 span {
+  color: #07223f;
+  font-weight: 900;
+}
+
+.img {
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+  transform: translateY(600px);
+  animation-name: slideup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.animation {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transform: translateY(-100px);
+  animation-name: slidedown;
+}
+#h1 {
+  animation-delay: 0.5s;
+}
+#h2 {
+  animation-delay: 1s;
+}
+#div-h2 {
+  animation-delay: 1.5s;
+}
+@keyframes slideup {
+  from {
+    transform: translateY(600px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideright {
+  from {
+    transform: translateX(600px);
+  }
+  to {
+    transform: translatex(0);
+  }
+}
+
+@keyframes slidedown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  from {
+    transform: translate(-50%, 200px);
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes popdown {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(-50%, 200px);
+  }
+}
