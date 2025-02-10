@@ -4,7 +4,13 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { RiHomeSmile2Fill, RiUserLine, RiProjectorFill } from "react-icons/ri";
 import { FaHeartbeat } from "react-icons/fa";
 import { MdPermContactCalendar } from "react-icons/md";
-
+import { FaArrowRight } from "react-icons/fa6";
+import figma from "../assets/figma.png";
+import node from "../assets/node.png";
+import sketch from "../assets/sketch.png";
+import react from "../assets/react.png";
+import phyton from "../assets/phyton.png";
+import photos from "../assets/photos.png";
 const Main = () => {
   const [open, setOpen] = useState(false);
 
@@ -16,23 +22,23 @@ const Main = () => {
     <>
       <HiMenuAlt2 className="menu-icon" onClick={clickHandler} />
       {open ? (
-        <div className= {`w-25 py-3 popup`}>
-         <RiHomeSmile2Fill className="icon"/>
-         <RiUserLine className="icon"/>
-         <FaHeartbeat className="icon"/>
-         <RiProjectorFill className="icon"/>
-         <MdPermContactCalendar className="icon"/>
+        <div className={`w-25 py-3 popup`}>
+          <RiHomeSmile2Fill className="icon" />
+          <RiUserLine className="icon" />
+          <FaHeartbeat className="icon" />
+          <RiProjectorFill className="icon" />
+          <MdPermContactCalendar className="icon" />
         </div>
       ) : (
-        <div className= {` w-25 py-3  popdown`}>
-        <RiHomeSmile2Fill />
-        <RiUserLine />
-        <FaHeartbeat />
-        <RiProjectorFill />
-        <MdPermContactCalendar />
-      </div>
+        <div className={` w-25 py-3  popdown`}>
+          <RiHomeSmile2Fill />
+          <RiUserLine />
+          <FaHeartbeat />
+          <RiProjectorFill />
+          <MdPermContactCalendar />
+        </div>
       )}
-      <div
+      <section
         style={{ height: "100vh", overflow: "hidden" }}
         className="d-flex align-items-end  justify-content-center position-relative"
       >
@@ -70,7 +76,104 @@ const Main = () => {
           </h1>
         </div>
         <img src={img} alt="" className="img" />
-      </div>
+      </section>
+      <section className="second-section py-5">
+        <div
+          className="px-5 py-4"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out"
+        >
+          <h2>Skills</h2>
+          <h4>MY TOP SKILLS</h4>
+        </div>
+        <div className="d-flex flex-wrap gap-4  w-75 mx-auto program">
+          <div
+            className="d-flex align-items-center gap-3 border bg-white p-4  program-sub"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="0"
+          >
+            <img src={figma} alt="" />
+            <div className="d-flex flex-column ">
+              <h6 className="my-0">Figma</h6>
+              <p className="my-0">Lorem ipsum text dummy</p>
+            </div>
+            <FaArrowRight className="right-arrow"/>
+          </div>
+          <div
+            className="d-flex align-items-center gap-3 border  p-4 program-sub"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="400"
+          >
+            <img src={node} alt="" />
+            <div className="d-flex flex-column ">
+              <h6 className="my-0">Node js</h6>
+              <p className="my-0">Lorem ipsum text dummy</p>
+            </div>
+            <FaArrowRight className="right-arrow"/>
+          </div>
+          <div
+            className="d-flex align-items-center gap-3 border  p-4 program-sub"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="800"
+          >
+            <img src={photos} alt="" />
+            <div className="d-flex flex-column ">
+              <h6 className="my-0">Adobe Photoshop</h6>
+              <p className="my-0">Lorem ipsum text dummy</p>
+            </div>
+             <FaArrowRight className="right-arrow"/>
+          </div>
+          <div
+            className="d-flex align-items-center gap-3 border  p-4 program-sub"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="1200"
+          >
+            <img src={react} alt="" />
+            <div className="d-flex flex-column ">
+              <h6 className="my-0">React js</h6>
+              <p className="my-0">Lorem ipsum text dummy</p>
+            </div>
+             <FaArrowRight className="right-arrow"/>
+          </div>
+          <div
+            className="d-flex align-items-center gap-3 border  p-4 program-sub"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="1600"
+          >
+            <img src={sketch} alt="" />
+            <div className="d-flex flex-column">
+              <h6 className="my-0">Sketch</h6>
+              <p className="my-0">Lorem ipsum text dummy</p>
+            </div>
+            <FaArrowRight className="right-arrow"/>
+          </div>
+          <div
+            className="d-flex align-items-center gap-3 border  p-4 program-sub"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="2000"
+          >
+            <img src={phyton} alt="" />
+            <div className="d-flex flex-column ">
+              <h6 className="my-0">Python</h6>
+              <p className="my-0">Lorem ipsum text dummy</p>
+            </div>
+             <FaArrowRight className="right-arrow"/>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
