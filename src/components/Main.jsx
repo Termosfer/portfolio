@@ -1,16 +1,21 @@
 import { useState } from "react";
-import img from "../assets/person.7931d41d.png";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { RiHomeSmile2Fill, RiUserLine, RiProjectorFill } from "react-icons/ri";
 import { FaHeartbeat } from "react-icons/fa";
 import { MdPermContactCalendar } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
+import img from "../assets/person.7931d41d.png";
+import img4 from "../assets/person.3319b995.png";
 import figma from "../assets/figma.png";
 import node from "../assets/node.png";
 import sketch from "../assets/sketch.png";
 import react from "../assets/react.png";
 import phyton from "../assets/phyton.png";
 import photos from "../assets/photos.png";
+import img1 from "../assets/download.png";
+import img2 from "../assets/download1.png";
+import img3 from "../assets/download2.png";
+import Slider from "./Slider";
 const Main = () => {
   const [open, setOpen] = useState(false);
 
@@ -40,7 +45,7 @@ const Main = () => {
       )}
       <section
         style={{ height: "100vh", overflow: "hidden" }}
-        className="d-flex align-items-end  justify-content-center position-relative"
+        className="d-flex align-items-end  justify-content-center position-relative first-section"
       >
         <div className="d-flex flex-column gap-4  my-5 main-div">
           <h1 id="h1" className="animation">
@@ -100,7 +105,7 @@ const Main = () => {
               <h6 className="my-0">Figma</h6>
               <p className="my-0">Lorem ipsum text dummy</p>
             </div>
-            <FaArrowRight className="right-arrow"/>
+            <FaArrowRight className="right-arrow" />
           </div>
           <div
             className="d-flex align-items-center gap-3 border  p-4 program-sub"
@@ -114,7 +119,7 @@ const Main = () => {
               <h6 className="my-0">Node js</h6>
               <p className="my-0">Lorem ipsum text dummy</p>
             </div>
-            <FaArrowRight className="right-arrow"/>
+            <FaArrowRight className="right-arrow" />
           </div>
           <div
             className="d-flex align-items-center gap-3 border  p-4 program-sub"
@@ -128,7 +133,7 @@ const Main = () => {
               <h6 className="my-0">Adobe Photoshop</h6>
               <p className="my-0">Lorem ipsum text dummy</p>
             </div>
-             <FaArrowRight className="right-arrow"/>
+            <FaArrowRight className="right-arrow" />
           </div>
           <div
             className="d-flex align-items-center gap-3 border  p-4 program-sub"
@@ -142,7 +147,7 @@ const Main = () => {
               <h6 className="my-0">React js</h6>
               <p className="my-0">Lorem ipsum text dummy</p>
             </div>
-             <FaArrowRight className="right-arrow"/>
+            <FaArrowRight className="right-arrow" />
           </div>
           <div
             className="d-flex align-items-center gap-3 border  p-4 program-sub"
@@ -156,7 +161,7 @@ const Main = () => {
               <h6 className="my-0">Sketch</h6>
               <p className="my-0">Lorem ipsum text dummy</p>
             </div>
-            <FaArrowRight className="right-arrow"/>
+            <FaArrowRight className="right-arrow" />
           </div>
           <div
             className="d-flex align-items-center gap-3 border  p-4 program-sub"
@@ -170,9 +175,97 @@ const Main = () => {
               <h6 className="my-0">Python</h6>
               <p className="my-0">Lorem ipsum text dummy</p>
             </div>
-             <FaArrowRight className="right-arrow"/>
+            <FaArrowRight className="right-arrow" />
           </div>
         </div>
+      </section>
+      <section className="third-section py-5">
+        <div
+          className="px-5 py-4"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out"
+        >
+          <h2>Services</h2>
+          <h4>WHAT I OFFER</h4>
+        </div>
+        <div className="d-flex  gap-4 w-100 mx-auto services px-5">
+          <div
+            className={`border d-flex flex-column  w-75  align-items-center rounded-3 gap-2 p-4 sub-services `}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="0"
+          >
+            <img src={img1} alt="" />
+            <h6>Web Development</h6>
+            <p className="text-center">
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document
+              elying on mean
+            </p>
+          </div>
+          <div
+            className={`border d-flex flex-column  w-75  align-items-center rounded-3 gap-2 p-4 sub-services `}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="800"
+          >
+            <img src={img2} alt="" />
+            <h6>ui / ux DESIGNING</h6>
+            <p className="text-center">
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document
+              elying on mean
+            </p>
+          </div>
+          <div
+            className={`border d-flex flex-column  w-75  align-items-center rounded-3 gap-2 p-4 sub-services`}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-delay="1200"
+          >
+            <img src={img3} alt="" />
+            <h6>PhotoShop Editing</h6>
+            <p className="text-center">
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document
+              elying on mean
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        className="fourth-section projects position-relative"
+        style={{ height: "100vh", overflow: "hidden" }}
+      >
+        <div
+          className="px-5 py-4"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out"
+        >
+          <h2>Projects</h2>
+          <h4>MY CREATION</h4>
+        </div>
+        <div
+          className="slider"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out"
+        >
+          <Slider />
+        </div>
+        <img
+          src={img4}
+          alt=""
+          className="img4"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out"
+        />
       </section>
     </>
   );

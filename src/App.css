@@ -192,15 +192,21 @@ span {
 }
 
 /* second-section */
+.fourth-section,
+.sub-services,
 .second-section {
   background-color: #f5f8fd;
 }
+.fourth-section h2,
+.third-section h2,
 .second-section h2 {
   font-size: 30px;
   font-family: "Inria Serif", serif;
   color: #06223f;
   font-weight: 600;
 }
+.fourth-section h4,
+.third-section h4,
 .second-section h4 {
   font-size: 36px;
   font-family: "paprika", serif;
@@ -233,4 +239,45 @@ span {
   font-family: "Poppins", serif;
   font-size: 15px;
   font-style: italic;
+}
+
+
+/* third-section */
+.first-section,
+.third-section {
+  background-color: #fff;
+}
+
+.sub-services img {
+  transition: transform 0.3s ease; 
+  
+}
+
+.sub-services:hover img {
+  transform: scale(1.1); 
+}
+
+.blurred {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* fourth section */
+
+.img4{
+  height: 75%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.slider{
+  position: absolute;
+  right: 200px;
+  top:100px;
+  border-radius: 20px;
+  height: 40%;
+  width: 300px;
 }
