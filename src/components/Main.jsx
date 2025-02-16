@@ -260,7 +260,7 @@ const Main = () => {
           data-aos-duration="1000"
           data-aos-easing="ease-out"
         >
-          <Slider />
+          {/* <Slider /> */}
         </div>
         <img
           src={img4}
@@ -281,7 +281,7 @@ const Main = () => {
           <h2>Testimonials</h2>
           <h4>MY CLIENT REVIEWS</h4>
         </div>
-        {/* <SliderUp /> */}
+        <SliderUp />
       </section>
       <section className="sixth-section py-5 position-relative">
         <div

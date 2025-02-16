@@ -8,19 +8,23 @@ import "swiper/css/pagination";
 
 import "./sliderup.css";
 
-import { Pagination } from "swiper/modules";
+import { Mousewheel, Pagination } from "swiper/modules";
 const SliderUp = () => {
   return (
     <>
       <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
+      direction={'vertical'}
+      loop={true}
+      slidesPerView={1}
+      spaceBetween={30}
+      mousewheel={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Mousewheel, Pagination]}
+      className="mySwiper swiper-backface-hidden"
       >
-        <SwiperSlide className="bg-primary w-50 ">
+        <SwiperSlide className="swiper-backface-hidden ">
             <img src={avatar} alt="" />
             <div>
               <p>
@@ -30,7 +34,7 @@ const SliderUp = () => {
               <h6>JOHN DOE</h6>
             </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-danger w-50 ">
+        <SwiperSlide className=" ">
             <img src={avatar1} alt="" />
             <div>
               <p>
@@ -40,7 +44,7 @@ const SliderUp = () => {
               <h6>JOHN DOE</h6>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-info w-50 ">
+        <SwiperSlide className="  ">
             <img src={avatar3} alt="" />
             <div>
               <p>
@@ -50,7 +54,7 @@ const SliderUp = () => {
               <h6>JOHN DOE</h6>
             </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-gray w-50 ">
+        <SwiperSlide className="  ">
             <img src={avatar4} alt="" />
             <div>
               <p>
