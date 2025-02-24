@@ -20,9 +20,10 @@ import Slider from "./Slider";
 import SliderUp from "./SliderUp";
 import { IoMdMail } from "react-icons/io";
 import { GrInstagram } from "react-icons/gr";
+import Popup from "./Popup";
 const Main = () => {
   const [open, setOpen] = useState(false);
-
+const [popUp, setPopUp] = useState(false)
   const clickHandler = () => {
     setOpen((open) => !open);
   };
@@ -96,6 +97,9 @@ const Main = () => {
           <h2>Skills</h2>
           <h4>MY TOP SKILLS</h4>
         </div>
+        {
+          popUp && <Popup/>
+        }
         <div className="d-flex flex-wrap gap-4  w-75 mx-auto program">
           <div
             className="d-flex align-items-center gap-3 border bg-white p-4  program-sub"
@@ -103,6 +107,7 @@ const Main = () => {
             data-aos-duration="1000"
             data-aos-easing="ease-out"
             data-aos-delay="0"
+            onClick={()=>setPopUp(!popUp)}
           >
             <img src={figma} alt="" />
             <div className="d-flex flex-column ">
