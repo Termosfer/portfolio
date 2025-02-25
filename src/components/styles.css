@@ -1,49 +1,37 @@
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
 
-.swiper {
+.small-swiper {
   width: 100%;
   height: 100%;
   border-radius: 20px;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background-color: #06223f;
   width: 10px;
   height: 10px;
 }
 
-.swiper-slide img {
-  width: 85%;
-  height: 100%;
-  object-fit: contain;
-}
 
 .div-img {
   padding: 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: #fff;
   font-family: "Poppins", serif;
   font-weight: 900;
   border-radius: 20px;
+
 }
+.div-img  img {
+  width: 85%;
+  height: 100%;
+  object-fit: contain;
+
+}
+
 .div-img p {
   color: #b7c5d3;
   align-self: flex-end;
@@ -55,4 +43,3 @@ body {
   font-weight: 900;
   align-self: flex-start;
 }
-

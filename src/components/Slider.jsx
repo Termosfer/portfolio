@@ -18,8 +18,7 @@ export default function Slider() {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
-        
+        className="mySwiper small-swiper"
       >
         <SwiperSlide>
           <div className="div-img">
