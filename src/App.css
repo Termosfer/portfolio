@@ -13,7 +13,7 @@
   left: 40px;
   font-size: 40px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 4;
 }
 
 .popup {
@@ -28,7 +28,7 @@
   animation-name: popup;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
-  z-index: 1;
+  z-index: 4;
 }
 .popdown {
   background-color: #eef1f6;
@@ -42,13 +42,21 @@
   animation-name: popdown;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
-  z-index: 1;
+  z-index: 4;
 }
 .icon {
-  background-color: #062344;
   border-radius: 50%;
-  padding: 10px;
-  font-size: 40px;
+  color: #06223f;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.active {
+  background-color: #062344;
   color: #fff;
 }
 .main-div {
@@ -324,11 +332,12 @@ span {
   width: 300px;
 }
 
-.seventh-section{
+.seventh-section {
   background-color: #07223f;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: "Poppins", sans-serif;
   background-color: transparent;
   border: 1px solid #4b5563;
@@ -339,11 +348,11 @@ input, textarea {
   padding: 15px;
 }
 
-::placeholder{
+::placeholder {
   color: #8899ad;
 }
 
-::placeholder:focus{
+::placeholder:focus {
   color: #fff;
 }
 
@@ -351,8 +360,13 @@ ol > li {
   font-family: "Poppins", sans-serif;
 }
 
-.pop{
-  width: 60%;
+.pop {
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 3;
+}
+
+.sub-pop {
+  width: 25%;
   border-radius: 4px;
-  border: 1px solid rgb(204, 204, 204,);
+  border: 1px solid rgb(204, 204, 204);
 }

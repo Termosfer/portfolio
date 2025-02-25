@@ -1,54 +1,23 @@
-import { useState } from "react";
-import { HiMenuAlt2 } from "react-icons/hi";
-import { RiHomeSmile2Fill, RiUserLine, RiProjectorFill } from "react-icons/ri";
-import { FaHeartbeat, FaPhoneAlt } from "react-icons/fa";
-import { MdPermContactCalendar } from "react-icons/md";
-import { FaArrowRight } from "react-icons/fa6";
 import img5 from "../assets/person.a03fc27a.png";
 import img from "../assets/person.7931d41d.png";
 import img4 from "../assets/person.3319b995.png";
-import figma from "../assets/figma.png";
-import node from "../assets/node.png";
-import sketch from "../assets/sketch.png";
-import react from "../assets/react.png";
-import phyton from "../assets/phyton.png";
-import photos from "../assets/photos.png";
 import img1 from "../assets/download.png";
 import img2 from "../assets/download1.png";
 import img3 from "../assets/download2.png";
-import Slider from "./Slider";
+/* import Slider from "./Slider"; */
 import SliderUp from "./SliderUp";
 import { IoMdMail } from "react-icons/io";
 import { GrInstagram } from "react-icons/gr";
-import Popup from "./Popup";
+import Skills from "./Skills";
+import Menu from "./Menu";
+import { FaPhoneAlt } from "react-icons/fa";
 const Main = () => {
-  const [open, setOpen] = useState(false);
-const [popUp, setPopUp] = useState(false)
-  const clickHandler = () => {
-    setOpen((open) => !open);
-  };
+ 
 
   return (
     <>
-      <HiMenuAlt2 className="menu-icon" onClick={clickHandler} />
-      {open ? (
-        <div className={`w-25 py-3 popup`}>
-          <RiHomeSmile2Fill className="icon" />
-          <RiUserLine className="icon" />
-          <FaHeartbeat className="icon" />
-          <RiProjectorFill className="icon" />
-          <MdPermContactCalendar className="icon" />
-        </div>
-      ) : (
-        <div className={` w-25 py-3  popdown`}>
-          <RiHomeSmile2Fill />
-          <RiUserLine />
-          <FaHeartbeat />
-          <RiProjectorFill />
-          <MdPermContactCalendar />
-        </div>
-      )}
-      <section
+      <Menu/>
+      <section id="home"
         style={{ height: "100vh", overflow: "hidden" }}
         className="d-flex align-items-end  justify-content-center position-relative first-section"
       >
@@ -87,108 +56,9 @@ const [popUp, setPopUp] = useState(false)
         </div>
         <img src={img} alt="" className="img" />
       </section>
-      <section className="second-section py-5">
-        <div
-          className="px-5 py-4"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-          data-aos-easing="ease-out"
-        >
-          <h2>Skills</h2>
-          <h4>MY TOP SKILLS</h4>
-        </div>
-        {
-          popUp && <Popup/>
-        }
-        <div className="d-flex flex-wrap gap-4  w-75 mx-auto program">
-          <div
-            className="d-flex align-items-center gap-3 border bg-white p-4  program-sub"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out"
-            data-aos-delay="0"
-            onClick={()=>setPopUp(!popUp)}
-          >
-            <img src={figma} alt="" />
-            <div className="d-flex flex-column ">
-              <h6 className="my-0">Figma</h6>
-              <p className="my-0">Lorem ipsum text dummy</p>
-            </div>
-            <FaArrowRight className="right-arrow" />
-          </div>
-          <div
-            className="d-flex align-items-center gap-3 border  p-4 program-sub"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out"
-            data-aos-delay="400"
-          >
-            <img src={node} alt="" />
-            <div className="d-flex flex-column ">
-              <h6 className="my-0">Node js</h6>
-              <p className="my-0">Lorem ipsum text dummy</p>
-            </div>
-            <FaArrowRight className="right-arrow" />
-          </div>
-          <div
-            className="d-flex align-items-center gap-3 border  p-4 program-sub"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out"
-            data-aos-delay="800"
-          >
-            <img src={photos} alt="" />
-            <div className="d-flex flex-column ">
-              <h6 className="my-0">Adobe Photoshop</h6>
-              <p className="my-0">Lorem ipsum text dummy</p>
-            </div>
-            <FaArrowRight className="right-arrow" />
-          </div>
-          <div
-            className="d-flex align-items-center gap-3 border  p-4 program-sub"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out"
-            data-aos-delay="1200"
-          >
-            <img src={react} alt="" />
-            <div className="d-flex flex-column ">
-              <h6 className="my-0">React js</h6>
-              <p className="my-0">Lorem ipsum text dummy</p>
-            </div>
-            <FaArrowRight className="right-arrow" />
-          </div>
-          <div
-            className="d-flex align-items-center gap-3 border  p-4 program-sub"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out"
-            data-aos-delay="1600"
-          >
-            <img src={sketch} alt="" />
-            <div className="d-flex flex-column">
-              <h6 className="my-0">Sketch</h6>
-              <p className="my-0">Lorem ipsum text dummy</p>
-            </div>
-            <FaArrowRight className="right-arrow" />
-          </div>
-          <div
-            className="d-flex align-items-center gap-3 border  p-4 program-sub"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out"
-            data-aos-delay="2000"
-          >
-            <img src={phyton} alt="" />
-            <div className="d-flex flex-column ">
-              <h6 className="my-0">Python</h6>
-              <p className="my-0">Lorem ipsum text dummy</p>
-            </div>
-            <FaArrowRight className="right-arrow" />
-          </div>
-        </div>
-      </section>
-      <section className="third-section py-5">
+      <Skills />
+      
+      <section id="services" className="third-section py-5">
         <div
           className="px-5 py-4"
           data-aos="fade-right"
@@ -246,7 +116,7 @@ const [popUp, setPopUp] = useState(false)
           </div>
         </div>
       </section>
-      <section
+      <section id="projects"
         className="fourth-section projects position-relative"
         style={{ height: "100vh", overflow: "hidden" }}
       >
@@ -322,7 +192,7 @@ const [popUp, setPopUp] = useState(false)
           </div>
         </div>
       </section>
-      <section className="seventh-section py-5">
+      <section id="contact" className="seventh-section py-5">
         <div
           className="px-5 py-4"
           data-aos="fade-down"
@@ -333,23 +203,44 @@ const [popUp, setPopUp] = useState(false)
           <h4>GET IN TOUCH</h4>
         </div>
         <div className="d-flex align-items-start gap-5 px-5">
-          <form className="d-flex flex-column w-50 gap-3" data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-easing="ease-out">
-            <input type="text" placeholder="Name" required className=""/>
-            <input type="text" placeholder="Email Id" className="" required/>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message" className=""></textarea>
-            <button type="submit" className="main-span ">Hire Me</button>
+          <form
+            className="d-flex flex-column w-50 gap-3"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+          >
+            <input type="text" placeholder="Name" required className="" />
+            <input type="text" placeholder="Email Id" className="" required />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Message"
+              className=""
+            ></textarea>
+            <button type="submit" className="main-span ">
+              Hire Me
+            </button>
           </form>
-          <div className="text-white" data-aos="fade-down"
-          data-aos-duration="1000"
-          data-aos-easing="ease-out">
-            <p className="d-flex align-items-center gap-2 fs-5"><IoMdMail className="fs-2"/>
-            codeaprogram@gmail.com</p>
-            <p className="d-flex align-items-center gap-2 fs-5"><FaPhoneAlt className="fs-2"/>
-            +91 1234 56778</p>
-            <p className="d-flex align-items-center gap-2 fs-5"><GrInstagram className="fs-2"/>
-            codeaprogram</p>
+          <div
+            className="text-white"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+          >
+            <p className="d-flex align-items-center gap-2 fs-5">
+              <IoMdMail className="fs-2" />
+              codeaprogram@gmail.com
+            </p>
+            <p className="d-flex align-items-center gap-2 fs-5">
+              <FaPhoneAlt className="fs-2" />
+              +91 1234 56778
+            </p>
+            <p className="d-flex align-items-center gap-2 fs-5">
+              <GrInstagram className="fs-2" />
+              codeaprogram
+            </p>
           </div>
         </div>
       </section>
